@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  margin: 0 10%;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &__link {
+      color: #ECF1F0;
+      text-decoration: none;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      &--active {
+        color: #0FAE96 !important;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    width: 104px;
+    padding: 13px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #0FAE96;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+}
