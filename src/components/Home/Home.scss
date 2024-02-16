@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 900px;
+  gap: 130px;
   background-color: hsla(269, 60%, 10%, 1);
   background-image: radial-gradient(at 34% 51%, hsla(266, 100%, 30%, 0.2) 0px, transparent 50%),
   radial-gradient(at 68% 49%, hsla(313, 100%, 15%, 0.2) 0px, transparent 50%);
@@ -43,6 +44,26 @@
       color: rgba(255, 255, 255, 1);
       cursor: pointer;
       margin-top: 40px;
+    }
+  }
+
+  &__trends{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title{
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      color: #ECF1F0;
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
     }
   }
 }

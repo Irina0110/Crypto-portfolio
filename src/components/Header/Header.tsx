@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 const CLASS = 'header';
 
-const links: string[] = ['Home', 'Businesses', 'Trade', 'Market', 'Learn']
+const links: string[] = ['Home', 'Features', 'Trade', 'Market', 'Start', 'Learn']
 
 export const Header: FC = () => {
     const [activeLink, setActiveLink] = useState<string>('');
