@@ -10,7 +10,11 @@ const router = createBrowserRouter(
                 <MainPage/>
             )
         },
-    ]
+
+    ],
+    {
+        basename: "/Crypto-portfolio",
+    }
 );
 
 export default function App() {
