@@ -35,7 +35,6 @@ export const Home: FC = () => {
         });
     }, [])
 
-    console.log(trends)
 
     return (
         <div className={CLASS} id={'#home'}>
@@ -54,7 +53,7 @@ export const Home: FC = () => {
             <div className={`${CLASS}__trends`}>
                 <span className={`${CLASS}__trends__title`}>Market Trends</span>
                 <div className={`${CLASS}__trends__cards`}>
-                    {trends?.map((trend) => <TrendCard {...trend}/>)}
+                    {trends?.map((trend) => <TrendCard key={trend?.short_name} {...trend}/>)}
                 </div>
             </div>
         </div>
