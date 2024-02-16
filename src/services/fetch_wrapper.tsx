@@ -1,5 +1,7 @@
 import {urlBase} from "@/constants/url.ts";
 
+
+
 export const fetch_wrapper = {
     get
 };
@@ -9,7 +11,7 @@ const fetchHeaders = () => {
     return {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'x-cg-pro-api-key': `${process.env.REACT_APP_API_KEY}`
     }
 }
 

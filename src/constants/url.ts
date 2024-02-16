@@ -1,1 +1,1 @@
-export const urlBase = 'https://api.bybit.com/'
+export const urlBase = 'https://pro-api.coingecko.com/api/v3/ '

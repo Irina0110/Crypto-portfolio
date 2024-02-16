@@ -17,6 +17,7 @@ export const Home: FC = () => {
 
     useEffect(() => {
         queries.getTrends().then((result) => {
+            console.log(result);
             const trendsArray: CryptocurrencyProps[] = [];
             Object.keys(result?.result).map((key) => {
                     const priceRange: number[] = [];
