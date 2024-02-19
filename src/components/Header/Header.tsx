@@ -2,6 +2,7 @@ import {FC, useState} from 'react';
 import Logo from '../../../public/Logo.png';
 import './Header.scss';
 import classNames from "classnames";
+import {Button} from "@/components/Button/Button.tsx";
 
 const CLASS = 'header';
 
@@ -29,7 +30,7 @@ export const Header: FC = () => {
                        className={isActiveLink(link?.toLowerCase())}
                        onClick={() => handleScrollToLink(link?.toLowerCase())}>{link}</a>)}
             </div>
-            <div className={`${CLASS}__button`}>Login</div>
+            <Button label={'Login'} width={'104px'}/>
         </div>
     )
 }

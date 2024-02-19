@@ -3,6 +3,7 @@ import './Home.scss'
 import {queries} from "@/services/queries.tsx";
 import {TrendCard} from "@/components/TrendCard/TrendCard.tsx";
 import {Cryptocurrency} from "@/types/responses.ts";
+import {Button} from "@/components/Button/Button.tsx";
 
 const CLASS = 'home';
 
@@ -26,9 +27,7 @@ export const Home: FC = () => {
                     Only at CryptoCap, you can build a good portfolio and learn
                     best practices about cryptocurrency.
                 </p>
-                <div className={`${CLASS}__title__button`}>
-                    Get start
-                </div>
+                <Button label={'Get start'} width={'190px'}/>
             </div>
             <div className={`${CLASS}__trends`}>
                 <span className={`${CLASS}__trends__title`}>Market Trends</span>
