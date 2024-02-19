@@ -29,6 +29,24 @@
         font-weight: 600;
         line-height: normal;
       }
+
+      label {
+        display: flex;
+        padding: 4px 6px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+        background: #B6B6B6;
+        color: #000;
+
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
     }
 
     &__button {

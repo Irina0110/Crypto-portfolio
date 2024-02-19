@@ -1,1 +1,1 @@
-export const urlBase = 'https://pro-api.coingecko.com/api/v3/ '
+export const urlBase = 'https://api.coingecko.com/api/v3/'

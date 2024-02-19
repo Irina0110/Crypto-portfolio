@@ -2,37 +2,16 @@ import {FC, useEffect, useState} from 'react';
 import './Home.scss'
 import {queries} from "@/services/queries.tsx";
 import {TrendCard} from "@/components/TrendCard/TrendCard.tsx";
+import {Cryptocurrency} from "@/types/responses.ts";
 
 const CLASS = 'home';
 
-interface CryptocurrencyProps {
-    short_name: string,
-    price: string;
-    dynamic: string;
-    price_range: number[]
-}
-
 export const Home: FC = () => {
-    const [trends, setTrends] = useState<CryptocurrencyProps[]>();
+    const [trends, setTrends] = useState<Cryptocurrency[]>();
 
     useEffect(() => {
         queries.getTrends().then((result) => {
-            console.log(result);
-            const trendsArray: CryptocurrencyProps[] = [];
-            Object.keys(result?.result).map((key) => {
-                    const priceRange: number[] = [];
-                    result?.result[key].map((item) => (
-                        priceRange?.push(+item?.c)
-                    ))
-                    trendsArray?.push({
-                        short_name: key,
-                        price: result?.result[key]?.[23]?.c,
-                        dynamic: `${(+result?.result[key]?.[23]?.c - +result?.result[key]?.[0]?.c ) * 100/ +result?.result[key]?.[0]?.c}`,
-                        price_range: priceRange
-                    })
-                }
-            )
-            setTrends(trendsArray);
+            setTrends(result)
         });
     }, [])
 
@@ -54,7 +33,7 @@ export const Home: FC = () => {
             <div className={`${CLASS}__trends`}>
                 <span className={`${CLASS}__trends__title`}>Market Trends</span>
                 <div className={`${CLASS}__trends__cards`}>
-                    {trends?.map((trend) => <TrendCard key={trend?.short_name} {...trend}/>)}
+                    {trends?.map((trend) => <TrendCard key={trend?.symbol} {...trend}/>)}
                 </div>
             </div>
         </div>
