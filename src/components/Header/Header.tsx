@@ -30,7 +30,7 @@ export const Header: FC = () => {
                        className={isActiveLink(link?.toLowerCase())}
                        onClick={() => handleScrollToLink(link?.toLowerCase())}>{link}</a>)}
             </div>
-            <Button label={'Login'} width={'104px'}/>
+            <Button label={'Login'} />
         </div>
     )
 }

@@ -26,7 +26,7 @@ export const Features:FC = () => {
                         We'll tell you what cryptocurrencies are, how they work and why you should own one right now. So let's do it.
                     </p>
                 </div>
-                <Button label={'Learn & Explore Now'} width={'max-content'}/>
+                <Button label={'Learn & Explore Now'}/>
             </div>
         </div>
     )

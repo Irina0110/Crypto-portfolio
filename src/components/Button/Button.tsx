@@ -5,10 +5,10 @@ const CLASS = 'button';
 
 interface ButtonProps {
     label: string,
-    width: string
+    width?: string
 }
 
-export const Button:FC<ButtonProps> = ({label, width}) => {
+export const Button:FC<ButtonProps> = ({label, width= 'max-content'}) => {
     return(
         <div className={CLASS} style={{width: width}}>
             {label}
