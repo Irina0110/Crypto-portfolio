@@ -3,16 +3,6 @@
   flex-direction: column;
   gap: 31px;
 
-  &__title {
-    color: #ECF1F0;
-    font-feature-settings: 'salt' on, 'liga' off;
-    font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 44px;
-  }
-
   &__subtitle {
     margin: 0;
     color: #B6B6B6;

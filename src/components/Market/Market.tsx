@@ -1449,8 +1449,8 @@ export const Market: FC = () => {
     }, [])*/
 
     return (
-        <div className={CLASS}>
-            <span className={`${CLASS}__title`}>Market</span>
+        <div className={CLASS} id={'#market'}>
+            <h1>Market</h1>
             <p className={`${CLASS}__subtitle`}>Cryptocurrency Categories</p>
 
             <div className={`${CLASS}__filters`}>
@@ -1474,7 +1474,7 @@ export const Market: FC = () => {
 
             <MarketTable data={mock}/>
 
-            <a href={'#'} className={`${CLASS}__link`}>See all coins</a>
+            <a href={'https://www.bybit.com/en/markets/overview'} className={`${CLASS}__link`}>See all coins</a>
 
         </div>
     )

@@ -9,9 +9,9 @@ export const Features:FC = () => {
     return(
         <div className={CLASS} id={'#features'}>
             <div className={`${CLASS}__title`}>
-                <span>
+                <h1>
                     CryptoCap Amazing Features
-                </span>
+                </h1>
                 <p className={`${CLASS}__secondary`}>
                     Explore sensational features to prepare your best investment in cryptocurrency
                 </p>

@@ -20,9 +20,9 @@ export const Home: FC = () => {
     return (
         <div className={CLASS} id={'#home'}>
             <div className={`${CLASS}__title`}>
-                <span>
+                <h1>
                    Start and Build Your Crypto Portfolio Here
-                </span>
+                </h1>
                 <p>
                     Only at CryptoCap, you can build a good portfolio and learn
                     best practices about cryptocurrency.
