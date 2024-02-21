@@ -1474,6 +1474,8 @@ export const Market: FC = () => {
 
             <MarketTable data={mock}/>
 
+            <a href={'#'} className={`${CLASS}__link`}>See all coins</a>
+
         </div>
     )
 }

@@ -29,7 +29,7 @@
     gap: 12px;
     flex-wrap: wrap;
 
-    &__item{
+    &__item {
       display: flex;
       padding: 10px 12px;
       justify-content: center;
@@ -48,7 +48,7 @@
       font-weight: 400;
       line-height: 24px;
 
-      &--active{
+      &--active {
         background: #EAEAEA;
         color: #211631;
       }
@@ -57,5 +57,14 @@
         cursor: pointer;
       }
     }
+  }
+
+  &__link {
+    color: #0FAE96;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 }

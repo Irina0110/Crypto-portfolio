@@ -5,13 +5,14 @@ const CLASS = 'button';
 
 interface ButtonProps {
     label: string,
-    width?: string
+    width?: string,
+    link?: string
 }
 
-export const Button:FC<ButtonProps> = ({label, width= 'max-content'}) => {
-    return(
-        <div className={CLASS} style={{width: width}}>
+export const Button: FC<ButtonProps> = ({label, width = 'max-content', link}) => {
+    return (
+        <a href={link} className={CLASS} style={{width: width}}>
             {label}
-        </div>
+        </a>
     )
 }

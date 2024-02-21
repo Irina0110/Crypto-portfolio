@@ -33,7 +33,7 @@ export const MarketTable: FC<MarketTableProps> = ({data}) => {
                             return {x: index, y: price}
                         })}/>}
                     </div>
-                    <Button label={'Trade'}/>
+                    <Button label={'Trade'} link={`https://www.bybit.com/en/trade/spot/${row?.symbol}/USDT`}/>
 
                 </div>
             )}
