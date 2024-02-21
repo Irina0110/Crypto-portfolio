@@ -11,7 +11,7 @@ export const Home: FC = () => {
     const [trends, setTrends] = useState<Cryptocurrency[]>();
 
     useEffect(() => {
-        queries.getTrends().then((result) => {
+        queries.getTrends({coins: 'bitcoin,ethereum,solana,ripple'}).then((result) => {
             setTrends(result)
         });
     }, [])

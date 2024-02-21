@@ -1,1 +1,0 @@
-export const categories = ['Popular', 'Tourism', 'Wallets', 'Software', 'Retail', 'Music', 'Media', 'Marketing', 'Healthcare', 'Entertainment', 'Education', 'Energy']

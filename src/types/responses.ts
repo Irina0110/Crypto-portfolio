@@ -16,7 +16,7 @@ export type Cryptocurrency = {
     market_cap_change_percentage_24h: number,
     circulating_supply: number,
     total_supply: number,
-    max_supply: null,
+    max_supply: number | null,
     sparkline_in_7d: {
         price: number[]
     },
@@ -30,7 +30,7 @@ export type Cryptocurrency = {
         times: number,
         currency: string,
         percentage: number
-    },
+    } | null,
     last_updated: string,
     price_change_percentage_7d_in_currency: number
 }

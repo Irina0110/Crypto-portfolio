@@ -1,0 +1,51 @@
+.market-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #B6B6B6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+
+  &__header,
+  &__row{
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr 2fr 2fr 1fr;
+    width: 100%;
+    box-sizing: border-box;
+    height: 63px;
+    padding: 10px 10px 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  &__header{
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__row {
+    &__cell-name{
+      display: flex;
+      gap: 22px;
+      align-items: center;
+
+      img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+      }
+    }
+
+    &__cell-chart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 41px;
+    }
+  }
+}
