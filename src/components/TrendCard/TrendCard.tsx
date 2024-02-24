@@ -30,10 +30,10 @@ export const TrendCard: FC<Cryptocurrency> = ({
             <div className={`${CLASS}__price`}>
                 <div>
                     <span>{`$${current_price}`}</span>
-                    <p>{`${(price_change_percentage_7d_in_currency).toFixed(2)}%`}</p>
+                    <p style={{color: price_change_percentage_7d_in_currency < 0 ? "#AE0000" : "#0FAE96"}}>{`${(price_change_percentage_7d_in_currency).toFixed(2)}%`}</p>
                 </div>
                 {sparkline_in_7d && <VictoryLine
-                    style={{data: {stroke: "#0FAE96", strokeWidth: 5}}}
+                    style={{data: {stroke: price_change_percentage_7d_in_currency < 0 ? '#AE0000' : "#0FAE96", strokeWidth: 5}}}
                     interpolation={"natural"} data={sparkline_in_7d?.price?.map((price, index) => {
                     return {x: index, y: price}
                 })}/>}
