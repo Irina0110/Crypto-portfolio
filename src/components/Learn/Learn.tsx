@@ -29,6 +29,7 @@ export const Learn: FC = () => {
                     </div>
                 )}
             </div>
+            <a className={`${CLASS}__link`} href={'#'}>See all articles</a>
         </div>
     )
 }

@@ -106,7 +106,7 @@
         }
 
         p {
-          color: var(--Font-Color-Light-Subtitle, #B6B6B6);
+          color: #B6B6B6;
           font-feature-settings: 'salt' on, 'liga' off;
 
           font-family: 'Roboto', sans-serif;
@@ -117,6 +117,16 @@
         }
       }
     }
+  }
+
+  &__link {
+    color: #0FAE96;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
   }
 }
 
