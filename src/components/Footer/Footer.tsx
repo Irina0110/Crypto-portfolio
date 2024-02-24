@@ -16,8 +16,8 @@ export const Footer:FC = () => {
                 <span className={`${CLASS}__text`}>2024 CoinMarketCap. All rights reserved</span>
             </div>
             <div className={`${CLASS}__links`}>
-                {links?.map((group) =>
-                    <div className={`${CLASS}__links__group`} key={group?.group}>
+                {links?.map((group, indexGroup) =>
+                    <div className={`${CLASS}__links__group`} key={indexGroup}>
                         <span className={`${CLASS}__links__group__title`}>{group?.group}</span>
                         {group?.links?.map((link, index) => <a className={`${CLASS}__text`} href={link?.link} key={index}>{link?.name}</a> )}
                     </div>

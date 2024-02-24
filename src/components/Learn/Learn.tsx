@@ -6,7 +6,7 @@ const CLASS = 'learn';
 
 export const Learn: FC = () => {
     return (
-        <div className={CLASS} id={'#learn'}>
+        <div className={CLASS} id='#learn'>
             <div className={`${CLASS}__title`}>
                 <h1>Learn About Cryptocurrency</h1>
                 <p>

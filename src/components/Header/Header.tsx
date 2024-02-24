@@ -1,36 +1,30 @@
-import {FC, useState} from 'react';
+import {FC} from 'react';
 import Logo from '../../../public/Logo.png';
 import './Header.scss';
-import classNames from "classnames";
 import {Button} from "@/components/Button/Button.tsx";
+import { Link } from "react-scroll";
 
 const CLASS = 'header';
 
-const links: string[] = ['Home', 'Features', 'Trade', 'Market', 'Start', 'Learn']
+const links: string[] = ['Home', 'Features', 'Market', 'Start', 'Learn']
 
 export const Header: FC = () => {
-    const [activeLink, setActiveLink] = useState<string>('');
-
-    const handleScrollToLink = (link: string) => {
-        setActiveLink(link);
-    }
-
-    const isActiveLink = (link: string) => {
-        return activeLink === link ?
-            classNames(`${CLASS}__links__link`, `${CLASS}__links__link--active`) :
-            `${CLASS}__links__link`
-    }
     return (
         <div className={CLASS}>
             <img src={Logo} alt={'logo'}/>
             <div className={`${CLASS}__links`}>
                 {links?.map((link, index) =>
-                    <a href={`#${link?.toLowerCase()}`}
-                       key={index}
-                       className={isActiveLink(link?.toLowerCase())}
-                       onClick={() => handleScrollToLink(link?.toLowerCase())}>{link}</a>)}
+                    <Link
+                        activeClass={`${CLASS}__links__link--active`}
+                        spy={true}
+                        smooth={true}
+                        offset={-300}
+                        duration={500}
+                        to={`#${link?.toLowerCase()}`}
+                        key={index}
+                        className={`${CLASS}__links__link`}>{link}</Link>)}
             </div>
-            <Button label={'Login'} />
+            <Button label={'Login'}/>
         </div>
     )
 }
