@@ -5,7 +5,7 @@ import {fileURLToPath, URL} from 'node:url';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/Crypto-portfolio/",
+  //base: "/Crypto-portfolio/",
   define: {
     'process.env': process.env
   },
