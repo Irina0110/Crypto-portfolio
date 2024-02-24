@@ -2,13 +2,13 @@ import {FC, useEffect, useState} from 'react';
 import './Market.scss';
 import classNames from "classnames";
 import {categories} from "@/constants/market.ts";
-import {queries} from "@/services/queries.tsx";
+//import {queries} from "@/services/queries.tsx";
 import {Cryptocurrency} from "@/types/responses.ts";
 import {MarketTable} from "@/components/MarketTable/MarketTable.tsx";
 
 const CLASS = 'market';
 
-/*const mock:Cryptocurrency[]= [
+const mock:Cryptocurrency[]= [
     {
         "id": "bitcoin",
         "symbol": "btc",
@@ -1420,19 +1420,19 @@ const CLASS = 'market';
         },
         "price_change_percentage_7d_in_currency": 16.693966832536482
     }
-]*/
+]
 
 export const Market: FC = () => {
     const [checkedFilter, setCheckedFilter] = useState<string>(categories?.[0]);
     const [isShowMore, setShowMore] = useState<boolean>(false);
-    const [coins, setCoins] = useState<Cryptocurrency[]>();
+    //const [coins, setCoins] = useState<Cryptocurrency[]>();
 
     const checkFilter = (item: string) => {
         if (item !== checkedFilter) {
-            setCheckedFilter(item)
+            /*setCheckedFilter(item)
             queries?.getTrends({category: checkedFilter !== 'Popular' ? checkedFilter?.toLowerCase() : undefined}).then((result) => {
                 setCoins(result)
-            });
+            });*/
         }
     }
     const handleShowMore = () => {
@@ -1443,10 +1443,10 @@ export const Market: FC = () => {
     }
 
     useEffect(() => {
-        queries?.getTrends({category: checkedFilter !== 'Popular' ? checkedFilter?.toLowerCase() : undefined}).then((result) => {
+        /*queries?.getTrends({category: checkedFilter !== 'Popular' ? checkedFilter?.toLowerCase() : undefined}).then((result) => {
             setCoins(result)
-        });
-    }, [])
+        });*/
+    }, [checkedFilter])
 
     return (
         <div className={CLASS} id={'#market'}>
@@ -1472,7 +1472,7 @@ export const Market: FC = () => {
                      onClick={handleShowMore}>{isShowMore ? 'Hide' : 'Show all'}</div>
             </div>
 
-            {coins && <MarketTable data={coins}/>}
+            <MarketTable data={mock}/>
 
             <a href={'https://www.bybit.com/en/markets/overview'} className={`${CLASS}__link`}>See all coins</a>
 
