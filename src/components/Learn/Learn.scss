@@ -83,6 +83,7 @@
 
       img {
         height: 50%;
+        object-fit: cover;
         border-radius: 18px 18px 0 0;
       }
 
@@ -114,6 +115,20 @@
           font-weight: 400;
           line-height: 22px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .learn {
+    &__content {
+      &__title {
+        max-width: max-content;
+      }
+
+      &__card {
+        width: 100%;
       }
     }
   }

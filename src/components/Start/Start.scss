@@ -56,3 +56,14 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .start {
+    flex-direction: column;
+    gap: 30px;
+
+    &__block {
+      width: 100%;
+    }
+  }
+}

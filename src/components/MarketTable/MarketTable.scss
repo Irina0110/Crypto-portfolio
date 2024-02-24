@@ -8,7 +8,7 @@
   font-style: normal;
 
   &__header,
-  &__row{
+  &__row {
     display: grid;
     grid-template-columns: 1fr 4fr 2fr 2fr 2fr 1fr;
     width: 100%;
@@ -22,13 +22,13 @@
     background: rgba(255, 255, 255, 0.02);
   }
 
-  &__header{
+  &__header {
     font-weight: 500;
     line-height: normal;
   }
 
   &__row {
-    &__cell-name{
+    &__cell-name {
       display: flex;
       gap: 22px;
       align-items: center;
@@ -46,6 +46,46 @@
       justify-content: center;
       width: 76px;
       height: 41px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .market-table {
+    &__header {
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+
+    &__row {
+      grid-template-columns: 1fr 4fr 2fr 2fr 1fr;
+
+      img,
+      &__cell-chart {
+        display: none;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .market-table {
+    &__header {
+      grid-template-columns: 1fr 4fr 2fr;
+      div:last-child, div:nth-child(4), div:nth-child(5) {
+        display: none;
+      }
+    }
+
+    &__row {
+      grid-template-columns: 1fr 4fr 2fr;
+
+      .button,
+      div:nth-child(4) {
+        display: none;
+      }
     }
   }
 }
