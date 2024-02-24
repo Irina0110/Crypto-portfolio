@@ -1,0 +1,120 @@
+.learn {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    text-align: center;
+
+    p {
+      color: #B6B6B6;
+      text-align: center;
+      font-feature-settings: 'salt' on, 'liga' off;
+
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      margin: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    &__label {
+      display: flex;
+      padding: 4px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: #B6B6B6;
+      font-feature-settings: 'salt' on, 'liga' off;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    &__title{
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      justify-content: flex-end;
+      align-items: start;
+      gap: 22px;
+      padding: 30% 44px 31px 30px;
+      min-height: 390px;
+      height: auto;
+      max-height: 500px;
+      max-width: 45%;
+      border-radius: 18px;
+      background: linear-gradient(0deg, rgba(38, 1, 68, 0.75) 0%, rgba(38, 1, 68, 0.75) 100%), center /cover url('/public/articles/article-1.png'), lightgray 50% / cover no-repeat;
+
+      span {
+        color: #FFF;
+        font-feature-settings: 'salt' on, 'liga' off;
+        font-family: 'Raleway', sans-serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px;
+      }
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      min-height: 390px;
+      width: min-content;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.02);
+
+      img {
+        height: 50%;
+        border-radius: 18px 18px 0 0;
+      }
+
+      &__text {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        span {
+          color: #FFF;
+          font-feature-settings: 'salt' on, 'liga' off;
+
+          font-family: 'Raleway', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        p {
+          color: var(--Font-Color-Light-Subtitle, #B6B6B6);
+          font-feature-settings: 'salt' on, 'liga' off;
+
+          font-family: 'Roboto', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
