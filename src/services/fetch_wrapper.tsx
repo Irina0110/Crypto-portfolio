@@ -12,7 +12,7 @@ const fetchHeaders = () => {
     return {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        //'x-cg-pro-api-key': import.meta.env.VITE_API_KEY
+        'x-cg-pro-api-key': import.meta.env.VITE_API_KEY
     }
 }
 

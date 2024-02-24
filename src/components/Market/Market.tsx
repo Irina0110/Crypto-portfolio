@@ -8,7 +8,7 @@ import {MarketTable} from "@/components/MarketTable/MarketTable.tsx";
 
 const CLASS = 'market';
 
-const mock:Cryptocurrency[]= [
+/*const mock:Cryptocurrency[]= [
     {
         "id": "bitcoin",
         "symbol": "btc",
@@ -1420,7 +1420,7 @@ const mock:Cryptocurrency[]= [
         },
         "price_change_percentage_7d_in_currency": 16.693966832536482
     }
-]
+]*/
 
 export const Market: FC = () => {
     const [checkedFilter, setCheckedFilter] = useState<string>(categories?.[0]);
@@ -1430,9 +1430,9 @@ export const Market: FC = () => {
     const checkFilter = (item: string) => {
         if (item !== checkedFilter) {
             setCheckedFilter(item)
-            /*queries?.getTrends({category: checkedFilter !== 'Popular' ? checkedFilter?.toLowerCase() : undefined}).then((result) => {
-                setMarket(result)
-            });*/
+            queries?.getTrends({category: checkedFilter !== 'Popular' ? checkedFilter?.toLowerCase() : undefined}).then((result) => {
+                setCoins(result)
+            });
         }
     }
     const handleShowMore = () => {
@@ -1442,11 +1442,11 @@ export const Market: FC = () => {
         setShowMore(!isShowMore);
     }
 
-    /*useEffect(() => {
+    useEffect(() => {
         queries?.getTrends({category: checkedFilter !== 'Popular' ? checkedFilter?.toLowerCase() : undefined}).then((result) => {
-            setMarket(result)
+            setCoins(result)
         });
-    }, [])*/
+    }, [])
 
     return (
         <div className={CLASS} id={'#market'}>
@@ -1472,7 +1472,7 @@ export const Market: FC = () => {
                      onClick={handleShowMore}>{isShowMore ? 'Hide' : 'Show all'}</div>
             </div>
 
-            <MarketTable data={mock}/>
+            {coins && <MarketTable data={coins}/>}
 
             <a href={'https://www.bybit.com/en/markets/overview'} className={`${CLASS}__link`}>See all coins</a>
 
